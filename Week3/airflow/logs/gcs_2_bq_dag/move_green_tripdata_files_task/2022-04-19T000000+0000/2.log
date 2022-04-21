@@ -1,0 +1,147 @@
+[2022-04-20 20:06:00,158] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_2_bq_dag.move_green_tripdata_files_task scheduled__2022-04-19T00:00:00+00:00 [None]>
+[2022-04-20 20:06:00,163] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_2_bq_dag.move_green_tripdata_files_task scheduled__2022-04-19T00:00:00+00:00 [None]>
+[2022-04-20 20:06:00,164] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 20:06:00,164] {taskinstance.py:1250} INFO - Starting attempt 2 of 3
+[2022-04-20 20:06:00,164] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 20:06:00,171] {taskinstance.py:1270} INFO - Executing <Task(GCSToGCSOperator): move_green_tripdata_files_task> on 2022-04-19 00:00:00+00:00
+[2022-04-20 20:06:00,174] {standard_task_runner.py:52} INFO - Started process 2198 to run task
+[2022-04-20 20:06:00,176] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'gcs_2_bq_dag', 'move_green_tripdata_files_task', 'scheduled__2022-04-19T00:00:00+00:00', '--job-id', '480', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_dag.py', '--cfg-path', '/tmp/tmpzrlew2n3', '--error-file', '/tmp/tmp5coso2az']
+[2022-04-20 20:06:00,176] {standard_task_runner.py:80} INFO - Job 480: Subtask move_green_tripdata_files_task
+[2022-04-20 20:06:00,204] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_2_bq_dag.move_green_tripdata_files_task scheduled__2022-04-19T00:00:00+00:00 [running]> on host 5a0aea9ec23a
+[2022-04-20 20:06:00,226] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_2_bq_dag
+AIRFLOW_CTX_TASK_ID=move_green_tripdata_files_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-19T00:00:00+00:00
+[2022-04-20 20:06:00,227] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-20 20:06:00,227] {gcs_to_gcs.py:343} INFO - Delimiter ignored because wildcard is in prefix
+[2022-04-20 20:06:00,538] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-01.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-01.parquet
+[2022-04-20 20:06:00,711] {gcs.py:250} INFO - Total Bytes: 12440449 | Bytes Written: 12440449
+[2022-04-20 20:06:00,711] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-01.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-01.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:00,794] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-01.parquet deleted.
+[2022-04-20 20:06:00,794] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-06.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-06.parquet
+[2022-04-20 20:06:00,943] {gcs.py:250} INFO - Total Bytes: 9391174 | Bytes Written: 9391174
+[2022-04-20 20:06:00,944] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-06.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-06.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:01,019] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-06.parquet deleted.
+[2022-04-20 20:06:01,019] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-04.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-04.parquet
+[2022-04-20 20:06:01,162] {gcs.py:250} INFO - Total Bytes: 10368298 | Bytes Written: 10368298
+[2022-04-20 20:06:01,162] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-04.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-04.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:01,238] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-04.parquet deleted.
+[2022-04-20 20:06:01,238] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-09.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-09.parquet
+[2022-04-20 20:06:01,389] {gcs.py:250} INFO - Total Bytes: 1908711 | Bytes Written: 1908711
+[2022-04-20 20:06:01,389] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-09.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-09.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:01,462] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-09.parquet deleted.
+[2022-04-20 20:06:01,462] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-07.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-07.parquet
+[2022-04-20 20:06:01,642] {gcs.py:250} INFO - Total Bytes: 9384299 | Bytes Written: 9384299
+[2022-04-20 20:06:01,642] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-07.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-07.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:01,777] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-07.parquet deleted.
+[2022-04-20 20:06:01,777] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-12.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-12.parquet
+[2022-04-20 20:06:01,910] {gcs.py:250} INFO - Total Bytes: 1803609 | Bytes Written: 1803609
+[2022-04-20 20:06:01,911] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-12.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-12.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:02,010] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-12.parquet deleted.
+[2022-04-20 20:06:02,010] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-11.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-11.parquet
+[2022-04-20 20:06:02,150] {gcs.py:250} INFO - Total Bytes: 8963547 | Bytes Written: 8963547
+[2022-04-20 20:06:02,151] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-11.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-11.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:02,224] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-11.parquet deleted.
+[2022-04-20 20:06:02,224] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-10.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-10.parquet
+[2022-04-20 20:06:02,371] {gcs.py:250} INFO - Total Bytes: 2079418 | Bytes Written: 2079418
+[2022-04-20 20:06:02,371] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-10.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-10.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:02,446] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-10.parquet deleted.
+[2022-04-20 20:06:02,446] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-07.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-07.parquet
+[2022-04-20 20:06:02,579] {gcs.py:250} INFO - Total Bytes: 1620410 | Bytes Written: 1620410
+[2022-04-20 20:06:02,580] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-07.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-07.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:02,666] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-07.parquet deleted.
+[2022-04-20 20:06:02,666] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-02.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-02.parquet
+[2022-04-20 20:06:02,793] {gcs.py:250} INFO - Total Bytes: 7901264 | Bytes Written: 7901264
+[2022-04-20 20:06:02,793] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-02.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-02.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:02,869] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-02.parquet deleted.
+[2022-04-20 20:06:02,869] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-03.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-03.parquet
+[2022-04-20 20:06:03,009] {gcs.py:250} INFO - Total Bytes: 12164777 | Bytes Written: 12164777
+[2022-04-20 20:06:03,010] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-03.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-03.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:03,086] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-03.parquet deleted.
+[2022-04-20 20:06:03,087] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-02.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-02.parquet
+[2022-04-20 20:06:03,208] {gcs.py:250} INFO - Total Bytes: 1417244 | Bytes Written: 1417244
+[2022-04-20 20:06:03,208] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-02.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-02.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:03,280] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-02.parquet deleted.
+[2022-04-20 20:06:03,281] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-06.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-06.parquet
+[2022-04-20 20:06:03,406] {gcs.py:250} INFO - Total Bytes: 2006987 | Bytes Written: 2006987
+[2022-04-20 20:06:03,406] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-06.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-06.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:03,492] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-06.parquet deleted.
+[2022-04-20 20:06:03,492] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-01.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-01.parquet
+[2022-04-20 20:06:03,629] {gcs.py:250} INFO - Total Bytes: 1655172 | Bytes Written: 1655172
+[2022-04-20 20:06:03,629] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-01.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-01.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:03,697] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-01.parquet deleted.
+[2022-04-20 20:06:03,697] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-05.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-05.parquet
+[2022-04-20 20:06:03,829] {gcs.py:250} INFO - Total Bytes: 10035404 | Bytes Written: 10035404
+[2022-04-20 20:06:03,830] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-05.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-05.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:03,909] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-05.parquet deleted.
+[2022-04-20 20:06:03,909] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-09.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-09.parquet
+[2022-04-20 20:06:04,050] {gcs.py:250} INFO - Total Bytes: 9061268 | Bytes Written: 9061268
+[2022-04-20 20:06:04,051] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-09.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-09.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:04,123] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-09.parquet deleted.
+[2022-04-20 20:06:04,123] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-08.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-08.parquet
+[2022-04-20 20:06:04,292] {gcs.py:250} INFO - Total Bytes: 8952873 | Bytes Written: 8952873
+[2022-04-20 20:06:04,292] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-08.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-08.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:04,370] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-08.parquet deleted.
+[2022-04-20 20:06:04,371] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-03.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-03.parquet
+[2022-04-20 20:06:04,549] {gcs.py:250} INFO - Total Bytes: 1819177 | Bytes Written: 1819177
+[2022-04-20 20:06:04,550] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-03.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-03.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:04,661] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-03.parquet deleted.
+[2022-04-20 20:06:04,661] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-04.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-04.parquet
+[2022-04-20 20:06:05,126] {gcs.py:250} INFO - Total Bytes: 885639 | Bytes Written: 885639
+[2022-04-20 20:06:05,126] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-04.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-04.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:05,204] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-04.parquet deleted.
+[2022-04-20 20:06:05,205] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-02.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-02.parquet
+[2022-04-20 20:06:05,458] {gcs.py:250} INFO - Total Bytes: 11658263 | Bytes Written: 11658263
+[2022-04-20 20:06:05,458] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-02.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-02.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:05,528] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-02.parquet deleted.
+[2022-04-20 20:06:05,528] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-05.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-05.parquet
+[2022-04-20 20:06:05,660] {gcs.py:250} INFO - Total Bytes: 1345962 | Bytes Written: 1345962
+[2022-04-20 20:06:05,660] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-05.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-05.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:05,730] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-05.parquet deleted.
+[2022-04-20 20:06:05,730] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-01.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-01.parquet
+[2022-04-20 20:06:05,862] {gcs.py:250} INFO - Total Bytes: 8617730 | Bytes Written: 8617730
+[2022-04-20 20:06:05,862] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-01.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-01.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:05,961] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-01.parquet deleted.
+[2022-04-20 20:06:05,961] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-03.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-03.parquet
+[2022-04-20 20:06:06,087] {gcs.py:250} INFO - Total Bytes: 4771175 | Bytes Written: 4771175
+[2022-04-20 20:06:06,088] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-03.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-03.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:06,159] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-03.parquet deleted.
+[2022-04-20 20:06:06,159] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-04.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-04.parquet
+[2022-04-20 20:06:06,300] {gcs.py:250} INFO - Total Bytes: 1889632 | Bytes Written: 1889632
+[2022-04-20 20:06:06,300] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-04.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-04.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:06,366] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-04.parquet deleted.
+[2022-04-20 20:06:06,367] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-05.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-05.parquet
+[2022-04-20 20:06:06,510] {gcs.py:250} INFO - Total Bytes: 1991301 | Bytes Written: 1991301
+[2022-04-20 20:06:06,510] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-05.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-05.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:06,589] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-05.parquet deleted.
+[2022-04-20 20:06:06,589] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-10.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-10.parquet
+[2022-04-20 20:06:06,741] {gcs.py:250} INFO - Total Bytes: 9316470 | Bytes Written: 9316470
+[2022-04-20 20:06:06,742] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-10.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-10.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:06,825] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-10.parquet deleted.
+[2022-04-20 20:06:06,825] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2021/green_tripdata_2021-07.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2021/green_tripdata_2021-07.parquet
+[2022-04-20 20:06:06,971] {gcs.py:250} INFO - Total Bytes: 1942383 | Bytes Written: 1942383
+[2022-04-20 20:06:06,971] {gcs.py:263} INFO - Object raw/green_tripdata/2021/green_tripdata_2021-07.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2021/green_tripdata_2021-07.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:07,043] {gcs.py:665} INFO - Blob raw/green_tripdata/2021/green_tripdata_2021-07.parquet deleted.
+[2022-04-20 20:06:07,044] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-11.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-11.parquet
+[2022-04-20 20:06:07,174] {gcs.py:250} INFO - Total Bytes: 1944132 | Bytes Written: 1944132
+[2022-04-20 20:06:07,174] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-11.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-11.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:07,253] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-11.parquet deleted.
+[2022-04-20 20:06:07,253] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-06.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-06.parquet
+[2022-04-20 20:06:07,428] {gcs.py:250} INFO - Total Bytes: 1485408 | Bytes Written: 1485408
+[2022-04-20 20:06:07,429] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-06.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-06.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:07,512] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-06.parquet deleted.
+[2022-04-20 20:06:07,513] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2019/green_tripdata_2019-12.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2019/green_tripdata_2019-12.parquet
+[2022-04-20 20:06:07,648] {gcs.py:250} INFO - Total Bytes: 8887390 | Bytes Written: 8887390
+[2022-04-20 20:06:07,648] {gcs.py:263} INFO - Object raw/green_tripdata/2019/green_tripdata_2019-12.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2019/green_tripdata_2019-12.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:07,728] {gcs.py:665} INFO - Blob raw/green_tripdata/2019/green_tripdata_2019-12.parquet deleted.
+[2022-04-20 20:06:07,728] {gcs_to_gcs.py:428} INFO - Executing copy of gs://dtc_data_lake_ny-rides-jenkins/raw/green_tripdata/2020/green_tripdata_2020-08.parquet to gs://dtc_data_lake_ny-rides-jenkins/green/green_tripdata/2020/green_tripdata_2020-08.parquet
+[2022-04-20 20:06:07,870] {gcs.py:250} INFO - Total Bytes: 1817417 | Bytes Written: 1817417
+[2022-04-20 20:06:07,870] {gcs.py:263} INFO - Object raw/green_tripdata/2020/green_tripdata_2020-08.parquet in bucket dtc_data_lake_ny-rides-jenkins rewritten to object green/green_tripdata/2020/green_tripdata_2020-08.parquet in bucket dtc_data_lake_ny-rides-jenkins
+[2022-04-20 20:06:07,948] {gcs.py:665} INFO - Blob raw/green_tripdata/2020/green_tripdata_2020-08.parquet deleted.
+[2022-04-20 20:06:07,954] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=gcs_2_bq_dag, task_id=move_green_tripdata_files_task, execution_date=20220419T000000, start_date=20220420T200600, end_date=20220420T200607
+[2022-04-20 20:06:07,990] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-20 20:06:08,009] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

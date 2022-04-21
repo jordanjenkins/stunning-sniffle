@@ -1,0 +1,54 @@
+[2022-04-20 00:50:04,644] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.bq_ext_to_part_task scheduled__2022-04-19T00:00:00+00:00 [queued]>
+[2022-04-20 00:50:04,649] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.bq_ext_to_part_task scheduled__2022-04-19T00:00:00+00:00 [queued]>
+[2022-04-20 00:50:04,650] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 00:50:04,650] {taskinstance.py:1250} INFO - Starting attempt 4 of 5
+[2022-04-20 00:50:04,650] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 00:50:04,657] {taskinstance.py:1270} INFO - Executing <Task(BigQueryInsertJobOperator): bq_ext_to_part_task> on 2022-04-19 00:00:00+00:00
+[2022-04-20 00:50:04,659] {standard_task_runner.py:52} INFO - Started process 561 to run task
+[2022-04-20 00:50:04,660] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'bq_ext_to_part_task', 'scheduled__2022-04-19T00:00:00+00:00', '--job-id', '373', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_dag.py', '--cfg-path', '/tmp/tmp5r6_m46_', '--error-file', '/tmp/tmpvl5gavlb']
+[2022-04-20 00:50:04,661] {standard_task_runner.py:80} INFO - Job 373: Subtask bq_ext_to_part_task
+[2022-04-20 00:50:04,685] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.bq_ext_to_part_task scheduled__2022-04-19T00:00:00+00:00 [running]> on host f4945e03cd2f
+[2022-04-20 00:50:04,706] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=bq_ext_to_part_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-19T00:00:00+00:00
+[2022-04-20 00:50:04,707] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-20 00:50:04,708] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2022-04-20 00:50:04,713] {bigquery.py:1554} INFO - Inserting job ***_gcs_to_bq_dag_bq_ext_to_part_task_2022_04_19T00_00_00_00_00_eb2caf38aef3b9b59dec84cb8a347785
+[2022-04-20 00:50:05,789] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2153, in execute
+    job = self._submit_job(hook, job_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 2119, in _submit_job
+    retry=self.result_retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 439, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 1560, in insert_job
+    job.result(timeout=timeout, retry=retry)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1498, in result
+    do_get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/query.py", line 1488, in do_get_result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/job/base.py", line 728, in result
+    return super(_AsyncJob, self).result(timeout=timeout, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/future/polling.py", line 135, in result
+    raise self._exception
+google.api_core.exceptions.NotFound: 404 Not found: Files /bigstore/dtc_data_lake_ny-rides-jenkins/yellow/2019/yellow_tripdata_2019-07.parquet
+
+Location: us-central1
+Job ID: airflow_gcs_to_bq_dag_bq_ext_to_part_task_2022_04_19T00_00_00_00_00_eb2caf38aef3b9b59dec84cb8a347785
+
+[2022-04-20 00:50:05,797] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=gcs_to_bq_dag, task_id=bq_ext_to_part_task, execution_date=20220419T000000, start_date=20220420T005004, end_date=20220420T005005
+[2022-04-20 00:50:05,805] {standard_task_runner.py:98} ERROR - Failed to execute job 373 for task bq_ext_to_part_task (404 Not found: Files /bigstore/dtc_data_lake_ny-rides-jenkins/yellow/2019/yellow_tripdata_2019-07.parquet
+
+Location: us-central1
+Job ID: airflow_gcs_to_bq_dag_bq_ext_to_part_task_2022_04_19T00_00_00_00_00_eb2caf38aef3b9b59dec84cb8a347785
+; 561)
+[2022-04-20 00:50:05,835] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-20 00:50:05,850] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

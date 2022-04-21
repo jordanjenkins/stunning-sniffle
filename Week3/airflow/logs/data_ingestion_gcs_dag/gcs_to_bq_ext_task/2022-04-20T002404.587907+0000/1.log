@@ -1,0 +1,42 @@
+[2022-04-20 00:24:06,906] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.gcs_to_bq_ext_task manual__2022-04-20T00:24:04.587907+00:00 [queued]>
+[2022-04-20 00:24:06,911] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.gcs_to_bq_ext_task manual__2022-04-20T00:24:04.587907+00:00 [queued]>
+[2022-04-20 00:24:06,911] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 00:24:06,912] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-20 00:24:06,912] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 00:24:06,919] {taskinstance.py:1270} INFO - Executing <Task(BigQueryCreateExternalTableOperator): gcs_to_bq_ext_task> on 2022-04-20 00:24:04.587907+00:00
+[2022-04-20 00:24:06,922] {standard_task_runner.py:52} INFO - Started process 2056 to run task
+[2022-04-20 00:24:06,924] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'gcs_to_bq_ext_task', 'manual__2022-04-20T00:24:04.587907+00:00', '--job-id', '351', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_dag.py', '--cfg-path', '/tmp/tmpoix4nslb', '--error-file', '/tmp/tmp10z_5ueq']
+[2022-04-20 00:24:06,924] {standard_task_runner.py:80} INFO - Job 351: Subtask gcs_to_bq_ext_task
+[2022-04-20 00:24:06,954] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcs_dag.gcs_to_bq_ext_task manual__2022-04-20T00:24:04.587907+00:00 [running]> on host 1b91fda6947c
+[2022-04-20 00:24:06,984] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=gcs_to_bq_ext_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-20T00:24:04.587907+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-20T00:24:04.587907+00:00
+[2022-04-20 00:24:06,985] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2022-04-20 00:24:07,443] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1135, in execute
+    table_resource=self.table_resource,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 439, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 414, in create_empty_table
+    table=table, exists_ok=exists_ok, retry=retry
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 755, in create_table
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 291, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 189, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http.py", line 484, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 POST https://bigquery.googleapis.com/bigquery/v2/projects/ny-rides-jenkins/datasets/trips_data_all/tables?prettyPrint=false: Error while reading table: external_yellow_tripdata, error message: Failed to expand table external_yellow_tripdata with file pattern gs://dtc_data_lake_ny-rides-jenkins/raw/yellow: matched no files.
+[2022-04-20 00:24:07,450] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcs_dag, task_id=gcs_to_bq_ext_task, execution_date=20220420T002404, start_date=20220420T002406, end_date=20220420T002407
+[2022-04-20 00:24:07,458] {standard_task_runner.py:98} ERROR - Failed to execute job 351 for task gcs_to_bq_ext_task (400 POST https://bigquery.googleapis.com/bigquery/v2/projects/ny-rides-jenkins/datasets/trips_data_all/tables?prettyPrint=false: Error while reading table: external_yellow_tripdata, error message: Failed to expand table external_yellow_tripdata with file pattern gs://dtc_data_lake_ny-rides-jenkins/raw/yellow: matched no files.; 2056)
+[2022-04-20 00:24:07,497] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-20 00:24:07,515] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
